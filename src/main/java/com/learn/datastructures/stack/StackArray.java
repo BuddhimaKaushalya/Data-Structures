@@ -5,12 +5,10 @@ import java.util.EmptyStackException;
 
 
 public class StackArray {
-    private int[] data;
+    private final int[] data;
     private int top;
-    private int maxSize;
 
     public StackArray (int capacity ){
-        this.maxSize = capacity;
         this.data = new int[capacity];
         this.top = -1;
     }
@@ -47,8 +45,7 @@ public class StackArray {
             System.out.println("Stack is empty!");
             return -1;
         }else{
-            int temp  = this.data[this.top];
-            return temp;
+            return this.data[this.top];
         }
     }
 
@@ -80,7 +77,7 @@ public class StackArray {
         System.out.println("Is stack empty? " + stack.isEmpty());
 
         // Checking if the stack is full
-        System.out.println("Is stack full? " + stack.isFull());;
+        System.out.println("Is stack full? " + stack.isFull());
 
     }
 
